@@ -4751,7 +4751,7 @@ static void alc245_fixup_hp_mute_led_v1_coefbit(struct hda_codec *codec,
 	struct alc_spec *spec = codec->spec;
 
 	if (action == HDA_FIXUP_ACT_PRE_PROBE) {
-		spec->mute_led_polarity = 1;
+		spec->mute_led_polarity = 0;
 		spec->mute_led_coef.idx = 0x0b;
 		spec->mute_led_coef.mask = 1 << 3;
 		spec->mute_led_coef.on = 1 << 3;
